@@ -11,7 +11,6 @@
         android:id="@+id/paintView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +18,7 @@
 
     <ImageButton
         android:id="@+id/save_button"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,13 +74,18 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="@+id/paintView"
-        app:layout_constraintTop_toTopOf="@+id/paintView"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_color_lens_black_24dp" />
 
-    <android.support.constraint.Group
-        android:id="@+id/group"
+    <ImageView
+        android:id="@+id/pen_size_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="save_button,clear_button,share_button,undo_button,redo_button,style_button" />
+        android:background="@drawable/pen_size_circle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
