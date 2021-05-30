@@ -7,7 +7,8 @@ import android.util.TypedValue;
 import android.view.ScaleGestureDetector;
 
 /**
- * Class which handles any scaling actions performed on the activity.
+ * Class which handles any scaling actions performed on the activity. These scaling gestures
+ * are responsible for changing the size of the pen being used.
  */
 public class ScaleHandler extends ScaleGestureDetector.SimpleOnScaleGestureListener
 {
